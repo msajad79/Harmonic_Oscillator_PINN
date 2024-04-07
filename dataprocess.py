@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import torch
 from torch.utils.data import Dataset,DataLoader
-from utils import oscillation
+from .utils import oscillation
 
 class LabeledDataset(Dataset):
     def __init__(self,  t_s=torch.linspace(0,0.5,5), zeta_s=torch.tensor([10.0]), wn_s=torch.tensor([10.0]), x0_s=torch.tensor([1.0]), xdot0_s=torch.tensor([0.0]), device="cpu"):
